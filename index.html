@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Siddharth's First Azure App v1</title>
+    <meta charset="UTF-8">
+    <title>Siddharth Azure App</title>
 </head>
 <body>
-    <h1>🔥 I deployed this on Azure 🔥</h1>
-    <p>This is my first cloud app working live</p>
+    <h1>🔥 My Azure App 🔥</h1>
+
+    <button onclick="getData()">Click Me</button>
+
+    <p id="output"></p>
+
+    <script>
+        function getData() {
+            document.getElementById("output").innerText = "Backend will respond here...";
+        }
+    </script>
 </body>
 </html>
