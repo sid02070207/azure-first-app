@@ -12,9 +12,16 @@
     <p id="output"></p>
 
     <script>
-        function getData() {
-            document.getElementById("output").innerText = "Backend will respond here...";
+    async function getData() {
+        try {
+            let response = await fetch("http://localhost:5000/test");
+            let data = await response.text();
+
+            document.getElementById("output").innerText = data;
+        } catch (error) {
+            document.getElementById("output").innerText = "Error connecting to backend";
         }
-    </script>
+    }
+</script>
 </body>
 </html>
